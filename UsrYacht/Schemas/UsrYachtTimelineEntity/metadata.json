@@ -1,0 +1,44 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "a602ff9d-3add-46a1-ae15-4a508c49982f",
+      "A2": "UsrYachtTimelineEntity",
+      "A5": "ce4267a4-9a77-41ab-b3f1-54d9a2c381d8",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "53635b3c-299b-4b57-9577-6535c9f2f310",
+      "B8": "8.3.2.4199",
+      "AD1": "46fabe8d-aae3-4d53-84e8-b363564a6854",
+      "AD2": "EntitySchemaManager",
+      "AD3": "TimelineEntity",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+  "SchemaName": "UsrYacht",
+  "TypeColumnUId": "00000000-0000-0000-0000-000000000000",
+  "TimelineEntityValues": [
+    {
+      "TypeColumnValue": "00000000-0000-0000-0000-000000000000",
+      "IsDefault": false,
+      "ComparisonType": null,
+      "TileName": null,
+      "SortColumn": null,
+      "OwnerColumn": "CreatedBy",
+      "IconId": null,
+      "ColumnLayouts": [
+        {
+          "ColumnName": "CreatedOn",
+          "ColumnLayout": null
+        },
+        {
+          "ColumnName": "UsrName",
+          "ColumnLayout": null
+        }
+      ]
+    }
+  ]
+}
+    }
+  }
+}

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "a602ff9d-3add-46a1-ae15-4a508c49982f",
+    "Name": "UsrYachtTimelineEntity",
+    "ModifiedOnUtc": "\/Date(1771521795000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Yacht (TimelineEntity)",
+    "DependsOn": []
+  }
+}
