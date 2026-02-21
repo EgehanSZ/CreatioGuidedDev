@@ -6,8 +6,10 @@
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push Me" />
 			<Item Name="LocalizableStrings.addRecord_me84pmk_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_nidjce7_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_sy2qf9f_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_wdbzncp_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_ygzeuok_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_ypdpsk6_caption.Value" Value="Add new" />
 		</Items>
 	</Group>
 </Resources>
