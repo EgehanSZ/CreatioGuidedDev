@@ -3,6 +3,15 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Yacht form page" />
+			<Item Name="LocalizableStrings.CategoryMultiSelect_label.Value" Value="Multi-select" />
+			<Item Name="LocalizableStrings.ExpansionPanel_xh6zlcz_title.Value" Value="Yacht Rental" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_0ye6ytv_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_j4kyxvj_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_ae3bmfe_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_iehtb25_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_yclvbah_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_k4j7hsh_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less than 50 usd" />
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push Me" />
 			<Item Name="LocalizableStrings.addRecord_me84pmk_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_nidjce7_caption.Value" Value="Add new" />

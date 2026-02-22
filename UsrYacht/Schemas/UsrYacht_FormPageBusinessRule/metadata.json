@@ -19,55 +19,6 @@
         "BRS1": [
           {
             "JI0": "Terrasoft.Core.BusinessRules.BusinessRule",
-            "UId": "b89b6409-2478-f8f9-d7bd-77729cd55bba",
-            "BR1": [
-              {
-                "JI0": "Terrasoft.Core.BusinessRules.Models.BusinessRuleCase",
-                "UId": "ed8dd354-ef0f-26b3-98fd-01b5fdf2a221",
-                "BRC1": {
-                  "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleGroupCondition",
-                  "UId": "26e42fb3-2f6f-1a73-3d76-10d7552418a4",
-                  "BGC1": 1,
-                  "BGC2": [
-                    {
-                      "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleCondition",
-                      "UId": "7b4b63e9-8fc2-32a4-c978-6ea1ca3c2580",
-                      "BCO1": {
-                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleAttributeExpression",
-                        "UId": "731ef213-370e-cf8f-dab6-d47f4dabfdf1",
-                        "BRE1": "Lookup",
-                        "BRE2": "AttributeValue",
-                        "BRX1": "PDS_UsrDriveType_ofz60z8"
-                      },
-                      "BCO3": 1
-                    }
-                  ]
-                },
-                "BRC2": [
-                  {
-                    "JI0": "Terrasoft.Core.BusinessRules.Models.Actions.BusinessRuleActionShowElement",
-                    "UId": "d583b4c4-9e69-10a9-a0a7-1fdaa93aeb34",
-                    "BRA4": "Comment,Ticket"
-                  }
-                ]
-              }
-            ],
-            "BR2": [
-              {
-                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
-                "UId": "9fda0ee3-7bc0-1ac4-875a-5ded247484ef",
-                "BRT1": "PDS_UsrDriveType_ofz60z8"
-              },
-              {
-                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
-                "UId": "eaf9061a-10f5-553f-93a0-421d6b3f2584",
-                "BRT2": 2
-              }
-            ],
-            "BR3": "BusinessRule_3fbcaa9"
-          },
-          {
-            "JI0": "Terrasoft.Core.BusinessRules.BusinessRule",
             "UId": "bc6e4215-a75c-800c-14f3-f8ef4793cf02",
             "BR1": [
               {
@@ -103,7 +54,7 @@
                   {
                     "JI0": "Terrasoft.Core.BusinessRules.Models.Actions.BusinessRuleActionShowElement",
                     "UId": "98274c1d-02ff-461e-0c13-e5d51a12f3b8",
-                    "BRA4": "City"
+                    "BRA4": "Ticket"
                   }
                 ]
               }
@@ -111,7 +62,7 @@
             "BR2": [
               {
                 "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
-                "UId": "3d827043-6d9d-5c55-9f8c-6ea5d2cb4203",
+                "UId": "eb6bada7-424e-0272-1a0b-ea2a058b8ef5",
                 "BRT2": 2
               }
             ],

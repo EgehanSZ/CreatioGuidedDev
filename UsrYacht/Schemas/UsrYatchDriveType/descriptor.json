@@ -8,6 +8,7 @@
       "Name": "BaseLookup"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Yatch Drive Type"
+    "Caption": "Yatch Drive Type",
+    "DependsOn": []
   }
 }
