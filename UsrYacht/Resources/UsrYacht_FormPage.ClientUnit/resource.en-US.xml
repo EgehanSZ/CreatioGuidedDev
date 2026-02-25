@@ -3,6 +3,8 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Yacht form page" />
+			<Item Name="LocalizableStrings.Button_b4dczne_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.CalcAvgTicketProcessMenuItem_caption.Value" Value="Run calc avg ticket process" />
 			<Item Name="LocalizableStrings.CategoryMultiSelect_label.Value" Value="Multi-select" />
 			<Item Name="LocalizableStrings.ExpansionPanel_xh6zlcz_title.Value" Value="Yacht Rental" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_0ye6ytv_caption.Value" Value="New" />
