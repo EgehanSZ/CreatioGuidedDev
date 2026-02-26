@@ -24,7 +24,7 @@ namespace Terrasoft.Configuration
                 .Column(Func.Max("UsrPrice"))
                 .From("UsrYacht")
                 .Where("UsrDriveTypeId").IsEqual(Column.Parameter(new Guid(driveTypeId)))
-                .And("UsrStatusId").IsEqual(Column.Parameter(new Guid("37fc7d95-70e9-4887-9b2b-f2340f5335a7"))) // 1. Operational
+                .And("UsrStatusId").IsEqual(Column.Parameter(new Guid("49715cdd-ca8f-4c69-be62-f7f4d017e894"))) // 1. Operational
                 as Select;
             decimal result = select.ExecuteScalar<decimal>();
             return result;
@@ -33,8 +33,8 @@ namespace Terrasoft.Configuration
         [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped,
             RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         public string GetExample()
-        {
-            return "OK!";
+        {      
+            return "OK !";
         }
 
     }

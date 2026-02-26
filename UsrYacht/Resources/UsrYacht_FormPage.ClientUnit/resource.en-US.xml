@@ -15,6 +15,7 @@
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_k4j7hsh_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less than 50 usd" />
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push Me" />
+			<Item Name="LocalizableStrings.RunServiceMenuItem_caption.Value" Value="Run max price web service" />
 			<Item Name="LocalizableStrings.addRecord_me84pmk_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_nidjce7_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_sy2qf9f_caption.Value" Value="Add new" />

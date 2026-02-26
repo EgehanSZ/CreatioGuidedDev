@@ -1,4 +1,4 @@
-define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
@@ -81,7 +81,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"caption": "#ResourceString(Button_b4dczne_caption)#",
 					"color": "outline",
 					"disabled": false,
-					"size": "medium",
+					"size": "large",
 					"iconPosition": "left-icon",
 					"visible": true,
 					"menuItems": [],
@@ -114,6 +114,22 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				"parentName": "Button_b4dczne",
 				"propertyName": "menuItems",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "RunServiceMenuItem",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(RunServiceMenuItem_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "usr.RunWebServiceRequest"
+					},
+					"icon": "cloud-arrow-up-icon"
+				},
+				"parentName": "Button_b4dczne",
+				"propertyName": "menuItems",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -1099,7 +1115,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					Terrasoft.showInformation("My button was pressed.");
 					var price = await request.$context.PDS_UsrPrice_p5y3b4j;
 					console.log("Price = " + price);
-					request.$context.PDS_UsrComment_uq0z3aq = "comment from JS code!";
+					request.$context.PDS_UsrComment_z8b5nld = "comment from JS code!";
 					/* Call the next handler if it exists and return its result. */
 					return next?.handle(request);
 				}
@@ -1109,16 +1125,54 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				/* The custom implementation of the system query handler. */
 				handler: async (request, next) => {
       				if (request.attributeName === 'PDS_UsrPrice_p5y3b4j' || 		        // if price changed
-					   request.attributeName === 'PDS_UsrPassengersCount_2cld40h' ) { 		// or Passenger count changed
-						let price = await request.$context.PDS_UsrPrice_p5y3b4j;
-						let passengers = await request.$context.PDS_UsrPassengersCount_2cld40h;
+					   request.attributeName === 'PDS_UsrPassengersCount_qfn4lyw' ) { 		// or Passenger count changed
+						let price = await request.$context.PDS_UsrPrice_p5y3b4j;            //PDS_UsrTicket_qpqwrvt  PDS_UsrPassengersCount_qfn4lyw PDS_UsrPrice_p5y3b4j
+						let passengers = await request.$context.PDS_UsrPassengersCount_qfn4lyw;
 						let ticket_price = price / passengers;
-						request.$context.PDS_UsrTicket_kuhbenv = ticket_price;
+						request.$context.PDS_UsrTicket_qpqwrvt = ticket_price;
 					}
 					/* Call the next handler if it exists and return its result. */
 					return next?.handle(request);
 				}
+			},
+			{
+				request: "usr.RunWebServiceRequest",                                        //RUN WEB SERVİCE REQUEST
+				/* Implementation of the custom query handler. */
+				handler: async (request, next) => {
+					console.log("Run web service button works...");
+
+					// get id from drive type lookup type object
+					var typeObject = await request.$context.PDS_UsrDriveType_37mker5;
+					var driveTypeId = "";
+					if (typeObject) {
+						driveTypeId = typeObject.value;
+					}
+					/* Create an instance of the HTTP client from @creatio-devkit/common. */
+					const httpClientService = new sdk.HttpClientService();
+					/* Specify the URL to run web service method. */
+					const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+					const transferName = "rest";
+					const serviceName = "YachtService";
+					const methodName = "GetMaxPriceByDriveTypeId";
+					const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
+					
+					//const endpoint = "http://localhost/D1_Studio/0/rest/YachtService/GetMaxPriceByDriveTypeId";
+					/* Send a POST HTTP request. The HTTP client converts the response body from JSON to a JS object automatically. */
+					var params = {
+						driveTypeId: driveTypeId
+					};
+					const response = await httpClientService.post(endpoint, params);
+					
+					console.log("response max price = " + response.body.GetMaxPriceByDriveTypeIdResult);
+					
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
 			}
+
+
+
+					
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{
